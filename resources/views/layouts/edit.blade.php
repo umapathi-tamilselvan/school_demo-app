@@ -25,39 +25,39 @@
 
                             <div class="form-group mt-2">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>
+                                <input type="text" class="form-control" id="name" name="name" value="{{$student->name}}" placeholder="Enter name" required>
                             </div>
 
                             <div class="form-group mt-2">
                                 <label for="class">Class</label>
-                                <input type="text" class="form-control" id="class" name="class" placeholder="Enter class" required>
+                                <input type="text" class="form-control" id="class" name="class"  value="{{$student->class}}" placeholder="Enter class" required>
                             </div>
 
                             <div class="form-group mt-2">
                                 <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter address" required>
+                                <input type="text" class="form-control" id="address" name="address"  value="{{$student->address}}" placeholder="Enter address" required>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="address">Roll no</label>
-                                <input type="text" class="form-control" id="roll_no" name="roll_no" placeholder="Enter roll_no" required>
+                                <input type="text" class="form-control" id="roll_no" name="roll_no"  value="{{$student->roll_no}}" placeholder="Enter roll number" required>
                             </div>
 
                             <div class="form-group mt-2">
                                 <label for="address">Section</label>
-                                <input type="text" class="form-control" id="section" name="section" placeholder="section" required>
+                                <input type="text" class="form-control" id="section" name="section"  value="{{$student->section}}" placeholder="section" required>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="address">Contact</label>
-                                <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter contact" required>
+                                <input type="text" class="form-control" id="contact" name="contact" value="{{$student->contact}}" placeholder="Enter contact" required>
                             </div>
                             <div class="form-group">
                                 <label for="dob">Date of Birth</label>
-                                <input type="date" class="form-control" id="dob" name="dob" value="{{ old('dob') }}">
+                                <input type="date" class="form-control" id="dob" name="dob" value="{{$student->dob}}">
                             </div>
 
                             <div class="form-group">
                                 <label for="blood_group">Blood Group</label>
-                                <select class="form-control" id="blood_group" name="blood_group">
+                                <select class="form-control" id="blood_group" name="blood_group"  value="{{$student->blood_group}}">
                                     <option value="">Select Blood Group</option>
                                     <option value="A+">A+</option>
                                     <option value="A-">A-</option>

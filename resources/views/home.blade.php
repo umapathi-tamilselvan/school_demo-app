@@ -2,27 +2,28 @@
 
 @section('content')
 
+<!-- Alert Messages -->
 @if (session('status'))
-    <div id="autoHideAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <div id="autoHideAlert" class="alert alert-success alert-dismissible fade show fixed-alert" role="alert">
         {{ session('status') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
 @if (session('success'))
-    <div id="autoHideAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <div id="autoHideAlert" class="alert alert-success alert-dismissible fade show fixed-alert" role="alert">
         {{ session('success') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
 @if (session('delete'))
-    <div id="autoHideAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <div id="autoHideAlert" class="alert alert-danger alert-dismissible fade show fixed-alert" role="alert">
         {{ session('delete') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
 
 <!-- Hero Section -->
-<section class="bg-dark text-white text-center py-5" style="background: linear-gradient(45deg, #1b1b1b, #343a40);">
+<section class="bg-dark text-white text-center py-2" style="background: linear-gradient(45deg, #1b1b1b, #343a40);">
     <div class="container">
         <h1 class="display-3 fw-bold">Welcome to SSVM</h1>
         <p class="lead text-muted">A modern solution to manage student details efficiently.</p>
@@ -34,7 +35,7 @@
 <section class="py-5" style="background-color: #f8f9fa;">
     <div class="container">
         <div class="card shadow-lg border-0">
-            <div class="card-header bg-gradient text-white text-center py-3" style="background: linear-gradient(45deg, #6c757d, #343a40);">
+            <div class="card-header bg-gradient text-black text-center py-3" style="background: linear-gradient(45deg, #6c757d, #343a40);">
                 <h3 class="fw-bold">Student List</h3>
             </div>
             <div class="card-body p-4">
@@ -90,5 +91,18 @@
         }
     }, 3000);
 </script>
+
+<!-- Custom CSS -->
+<style>
+    .fixed-alert {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1050;
+        max-width: 500px;
+        width: 100%;
+    }
+</style>
 
 @endsection

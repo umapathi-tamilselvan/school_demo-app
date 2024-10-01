@@ -14,7 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="container mt-5">
+                    <div class="container mt-3">
                         <h2 class="mb-4">Add Student Details</h2>
                         <form action="/student/submit" method="POST">
                             @csrf
@@ -48,12 +48,12 @@
                                 <label for="address">Contact</label>
                                 <input type="text" class="form-control" id="address" name="contact" placeholder="Enter contact" required>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mt-2">
                                 <label for="dob">Date of Birth</label>
                                 <input type="date" class="form-control" id="dob" name="dob" value="{{ old('dob') }}">
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-2">
                                 <label for="blood_group">Blood Group</label>
                                 <select class="form-control" id="blood_group" name="blood_group">
                                     <option value="">Select Blood Group</option>

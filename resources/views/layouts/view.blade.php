@@ -16,11 +16,6 @@
                 <h3>Student Profile</h3>
             </div>
             <div class="card-body">
-                <!-- Student Photo (Optional) -->
-                <div class="text-center mb-4">
-                    <img src="https://via.placeholder.com/150" alt="Profile Photo" class="rounded-circle">
-                </div>
-                <!-- Student Information -->
                 <h5 class="card-title text-center">{{ $student->name }}</h5>
                 <p class="text-muted text-center">{{ $student->email }}</p>
 
