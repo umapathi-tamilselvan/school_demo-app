@@ -20,9 +20,12 @@ class StudentController extends Controller
     }
     public function update(Request $request , $id){
         $data=$request->validate([
-            'name'=>'required',
+           'name'=>'required',
             'class'=>'required|numeric',
             'address'=>'required|string|max:225',
+            'roll_no'=>'required|',
+            'contact'=>'required',
+            'section'=>'required'
         ]);
         $student=Student::find($id);
         $student->update($data);

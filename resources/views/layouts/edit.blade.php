@@ -39,16 +39,16 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="address">Roll no</label>
-                                <input type="text" class="form-control" id="address" name="roll_no" placeholder="Enter address" required>
+                                <input type="text" class="form-control" id="roll_no" name="roll_no" placeholder="Enter roll_no" required>
                             </div>
 
                             <div class="form-group mt-2">
                                 <label for="address">Section</label>
-                                <input type="text" class="form-control" id="address" name="section" placeholder="Enter address" required>
+                                <input type="text" class="form-control" id="section" name="section" placeholder="section" required>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="address">Contact</label>
-                                <input type="text" class="form-control" id="address" name="contact" placeholder="Enter address" required>
+                                <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter contact" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary mt-2">Save</button>
