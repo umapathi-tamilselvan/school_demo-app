@@ -22,6 +22,8 @@ class CreateStudentsTable extends Migration
             $table->string('contact');
             $table->string('section');
             $table->text('address');
+            $table->date('dob');
+            $table->string('blood_group');
             $table->timestamps();
         });
     }

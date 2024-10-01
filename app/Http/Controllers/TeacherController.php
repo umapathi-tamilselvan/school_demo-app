@@ -36,6 +36,8 @@ class TeacherController extends Controller
             'roll_no' => 'required',
             'contact' => 'required|string|max:15',
             'section' => 'required',
+            'dob' => 'required|date',
+            'blood_group' => 'required|string',
 
         ]);
 
@@ -46,9 +48,11 @@ class TeacherController extends Controller
             'roll_no' => $data['roll_no'],
             'contact' => $data['contact'],
             'section' => $data['section'],
-
+            'dob' => $data['dob'],
+            'blood_group' => $data['blood_group'],
             'teacher_id' => auth()->user()->id,
         ]);
+
         $students->save();
 
         return redirect('home')->with('status', 'Successfully Student added');

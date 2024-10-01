@@ -29,6 +29,7 @@
                         <p><strong>Roll No:</strong> {{ $student->roll_no }}</p>
                         <p><strong>Class:</strong> {{ $student->class }}</p>
                         <p><strong>Section:</strong> {{ $student->section }}</p>
+                        <p><strong>Blood Group:</strong> {{ $student->blood_group }}</p>
                     </div>
                     <div class="col-md-6">
                         <p><strong>Date of Birth:</strong> {{ $student->dob }}</p>

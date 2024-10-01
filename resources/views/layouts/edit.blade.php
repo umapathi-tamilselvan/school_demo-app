@@ -50,6 +50,25 @@
                                 <label for="address">Contact</label>
                                 <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter contact" required>
                             </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" name="dob" value="{{ old('dob') }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="blood_group">Blood Group</label>
+                                <select class="form-control" id="blood_group" name="blood_group">
+                                    <option value="">Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
 
                             <button type="submit" class="btn btn-primary mt-2">Save</button>
 
