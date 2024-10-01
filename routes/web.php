@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\StandardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +22,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [StandardController::class, 'index'])->name('home');
-Route::get('/create', [StandardController::class,'create'])->name('create');
-Route::get('/contact',[StandardController::class,'show']);
-Route::post('/create/submit', [StandardController::class,'store']);
-Route::get('/home/view/{id}', [StudentController::class,'index']);
-Route::get('/home/edit/{id}', [StudentController::class,'show']);
-Route::post('/home/edit/{id}', [StudentController::class,'update']);
+Route::get('/home', [TeacherController::class, 'index'])->name('home');
+Route::get('/home/student/create', [TeacherController::class, 'create'])->name('create');
+Route::post('/student/submit', [TeacherController::class, 'store']);
+Route::get('/home/student/{id}/view', [StudentController::class, 'index']);
+Route::get('/home/student/{id}/edit', [StudentController::class, 'show']);
+Route::post('/home/student/{id}', [StudentController::class, 'update']);
 Route::delete('/home/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
-

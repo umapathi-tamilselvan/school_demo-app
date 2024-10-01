@@ -16,7 +16,7 @@
                     @endif
                     <div class="container mt-5">
                         <h2 class="mb-4">Add Student Details</h2>
-                        <form action="/create/submit" method="POST">
+                        <form action="/student/submit" method="POST">
                             @csrf
 
 

@@ -17,7 +17,7 @@
                     <div class="container mt-5">
                         <h2 class="mb-4">Edit Student Details</h2>
 
-                        <form action="/home/edit/{{$student->id}}" method="POST">
+                        <form action="/home/student/{{$student->id}}" method="POST">
                             @csrf
 
 

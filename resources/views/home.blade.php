@@ -26,7 +26,7 @@
     <div class="container">
         <h1 class="display-4">Welcome to SSVM</h1>
         <p class="lead">Manage student details efficiently with our system.</p>
-        <a href="/create" class="btn btn-lg btn-light mt-4">Add Student</a>
+        <a href="/home/student/create" class="btn btn-lg btn-light mt-4">Add Student</a>
     </div>
 </section>
 
@@ -43,17 +43,18 @@
                         <tr>
                             <th>S.No</th>
                             <th>Name</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>Roll NO</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($students as $student)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td><a href="/home/view/{{ $student->id }}" class="text-decoration-none">{{ $student->name }}</a></td>
-                                <td><a href="/home/edit/{{ $student->id }}" class="btn btn-outline-warning">Edit</a></td>
-                                <td>
+                                <td><a href="/home/student/{{ $student->id }}/view" class="text-decoration-none">{{ $student->name }}</a></td>
+                                <td><small>{{$student->roll_no}}</small></td>
+                                <td><a href="/home/student/{{ $student->id }}/edit" class="btn btn-outline-warning">Edit</a>
+
                                     <form action="{{ route('students.destroy', $student->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
