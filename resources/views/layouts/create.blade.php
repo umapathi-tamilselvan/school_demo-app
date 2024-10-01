@@ -62,4 +62,10 @@
         </div>
     </div>
 </div>
+<footer class="bg-dark text-white py-3 position-fixed w-100 bottom-0">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2024 SSVM. All rights reserved.</p>
+    </div>
+</footer>
+
 @endsection

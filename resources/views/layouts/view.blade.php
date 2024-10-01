@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile</title>
+@extends('layouts.app')
+
+@section('content')
+
+
+
+<title>Student Profile</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -45,8 +46,18 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
+
+<footer class="bg-dark text-white py-3 position-fixed w-100 bottom-0">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2024 SSVM. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+@endsection

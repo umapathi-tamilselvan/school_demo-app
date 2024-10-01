@@ -71,11 +71,13 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark py-3">
+<!-- Footer -->
+<footer class="bg-dark text-white py-3 position-fixed w-100 bottom-0">
     <div class="container text-center">
-        <p class="text-white mb-0">&copy; 2024 SSVM. All rights reserved.</p>
+        <p class="mb-0">&copy; 2024 SSVM. All rights reserved.</p>
     </div>
 </footer>
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
