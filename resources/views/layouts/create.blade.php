@@ -16,11 +16,14 @@
                     @endif
                     <div class="container mt-3">
                         <h2 class="mb-4">Add Student Details</h2>
-                        <form action="/student/submit" method="POST">
+                        <form action="/student/submit" method="POST" enctype="multipart" >
                             @csrf
 
 
-
+                            <div class="form-group mt-2">
+                                <label for="image">Upload Image</label>
+                                <input type="file" class="form-control" id="file" name="file"  required>
+                            </div>
                             <div class="form-group mt-2">
                                 <label for="name">Name</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required>

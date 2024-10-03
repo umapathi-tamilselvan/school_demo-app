@@ -11,7 +11,7 @@ class Student extends Model
 
     protected $gaurded = [];
 
-    protected $fillable = ['name', 'class', 'address', 'roll_no', 'contact', 'section', 'teacher_id', 'dob', 'blood_group'];
+    protected $fillable = ['name', 'class', 'address', 'roll_no', 'contact', 'section', 'teacher_id', 'dob', 'blood_group','image'];
 
     public function teacher()
     {

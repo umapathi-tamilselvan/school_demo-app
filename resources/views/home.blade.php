@@ -52,7 +52,18 @@
                         @foreach ($students as $student)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td><a href="/home/student/{{ $student->id }}/view" class="text-decoration-none text-dark fw-bold">{{ $student->name }}</a></td>
+                                <td>
+                                    <a href="/home/student/{{ $student->id }}/view" class="text-decoration-none text-dark fw-bold d-flex align-items-center">
+                                        <!-- Profile Image -->
+                                        @if($student->image)
+                                            <img src="{{ asset('images/students/' . $student->image) }}" alt="{{ $student->name }}" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px;">
+                                        @else
+                                            <img src="{{ asset('images/default-avatar.png') }}" alt="Default Image" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px;">
+                                        @endif
+                           
+                                        {{ $student->name }}
+                                    </a>
+                                </td>
                                 <td><small class="text-muted">{{ $student->roll_no }}</small></td>
                                 <td>
                                     <a href="/home/student/{{ $student->id }}/edit" class="btn btn-warning btn-sm text-white">Edit</a>

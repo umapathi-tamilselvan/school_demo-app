@@ -38,10 +38,20 @@ class TeacherController extends Controller
             'section' => 'required',
             'dob' => 'required|date',
             'blood_group' => 'required|string',
-
+            'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+        $imageName = time() . '.' . $request->file->extension();
 
-        $students = Student::create([
+        $request->file->storeAs('public/images', $imageName);
+
+          if ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images/students'), $imageName);
+        } else {
+            $imageName = null; // If no image was uploaded
+        }
+         $students = Student::create([
             'name' => $data['name'],
             'class' => $data['class'],
             'address' => $data['address'],
@@ -50,8 +60,10 @@ class TeacherController extends Controller
             'section' => $data['section'],
             'dob' => $data['dob'],
             'blood_group' => $data['blood_group'],
+           'image' => $imageName,
             'teacher_id' => auth()->user()->id,
         ]);
+
 
         $students->save();
 

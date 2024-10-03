@@ -33,9 +33,10 @@ class StudentController extends Controller
             'section' => 'required',
             'dob' => 'required|date',
             'blood_group' => 'required|string',
+          'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
         ]);
-
+        
         $student = Student::find($id);
         $student->update($data);
 

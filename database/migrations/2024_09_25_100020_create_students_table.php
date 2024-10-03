@@ -24,6 +24,7 @@ class CreateStudentsTable extends Migration
             $table->text('address');
             $table->date('dob');
             $table->string('blood_group');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
