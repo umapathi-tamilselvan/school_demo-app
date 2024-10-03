@@ -22,7 +22,7 @@
 
 
                             <div class="form-group mt-2">
-                                <label for="image">Upload Image</label>
+                                <label for="file">Upload Image</label>
                                 <input type="file" class="form-control" id="file" name="file"  required>
                             </div>
                             <div class="form-group mt-2">
@@ -59,8 +59,8 @@
 
                             <div class="form-group mt-2">
                                 <label for="blood_group">Blood Group</label>
-                                <select class="form-control" id="blood_group" name="blood_group" >
-                                    <option value="{{$student->blood_group}}">Select Blood Group</option>
+                                <select class="form-control" id="blood_group" name="blood_group" value="{{$student->blood_group}}" >
+                                    <option >Select Blood Group</option>
                                     <option value="A+">A+</option>
                                     <option value="A-">A-</option>
                                     <option value="B+">B+</option>

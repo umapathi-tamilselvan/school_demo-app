@@ -33,12 +33,19 @@ class StudentController extends Controller
             'section' => 'required',
             'dob' => 'required|date',
             'blood_group' => 'required|string',
-          'file'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'file' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
         ]);
-        
+
         $student = Student::find($id);
+        if ($request->hasFile('file')) {
+            $image = $request->file('file');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images/students'), $imageName);
+            $data['image'] = $imageName;
+        }
         $student->update($data);
+        dd($student);
 
         return redirect('home')->with('success', 'Edited successfully!');
     }

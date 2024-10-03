@@ -49,7 +49,7 @@ class TeacherController extends Controller
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images/students'), $imageName);
         } else {
-            $imageName = null; // If no image was uploaded
+            $imageName = null;
         }
          $students = Student::create([
             'name' => $data['name'],

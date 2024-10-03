@@ -25,14 +25,14 @@
 <!-- Hero Section -->
 <section class="bg-dark text-white text-center py-2 " style="background: linear-gradient(45deg, #1b1b1b, #343a40);">
     <div class="container">
-        <h1 class="display-6 fw-bold">Welcome to SSVM</h1>
+        <h1 class="display-8 fw-bold">Welcome to SSVM</h1>
         <p class="lead text-muted">A modern solution to manage student details efficiently.</p>
         <a href="/home/student/create" class="btn btn-lg btn-outline-light  shadow-sm">Add Student</a>
     </div>
 </section>
 
 <!-- Students Table Section -->
-<section class="py-5" style="background-color: #f8f9fa;">
+<section class="py-2" style="background-color: #f8f9fa;">
     <div class="container">
         <div class="card shadow-lg border-0">
             <div class="card-header bg-gradient text-black text-center py-3" style="background: linear-gradient(45deg, #6c757d, #343a40);">
@@ -60,7 +60,7 @@
                                         @else
                                             <img src="{{ asset('images/default-avatar.png') }}" alt="Default Image" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px;">
                                         @endif
-                           
+
                                         {{ $student->name }}
                                     </a>
                                 </td>
