@@ -23,11 +23,11 @@
 @endif
 
 <!-- Hero Section -->
-<section class="bg-dark text-white text-center py-2" style="background: linear-gradient(45deg, #1b1b1b, #343a40);">
+<section class="bg-dark text-white text-center py-2 " style="background: linear-gradient(45deg, #1b1b1b, #343a40);">
     <div class="container">
-        <h1 class="display-3 fw-bold">Welcome to SSVM</h1>
+        <h1 class="display-6 fw-bold">Welcome to SSVM</h1>
         <p class="lead text-muted">A modern solution to manage student details efficiently.</p>
-        <a href="/home/student/create" class="btn btn-lg btn-outline-light mt-4 shadow-sm">Add Student</a>
+        <a href="/home/student/create" class="btn btn-lg btn-outline-light  shadow-sm">Add Student</a>
     </div>
 </section>
 
